@@ -7,7 +7,11 @@ pp directors_database
 # using director_data as input
 def gross_for_director(director_data)
   gross_of_movies = 0
-  
+  movie_count = 0
+  while movie_count < director_data[:movies].length do
+    gross_of_movies += director_data[:movies][movie_count][:worldwide_gross]
+    movie_count += 1 
+  end
   gross_of_movies
 end
 
